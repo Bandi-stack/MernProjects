@@ -1,0 +1,131 @@
+.nav-wrapper {
+    background: rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+    border-radius: 50px;
+    margin: 0 5rem;
+    width: 1200px;
+}
+
+.nav-content {
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+
+
+}
+
+.logo_icon {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.nav-content ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-content li {
+    margin: 0 1.5rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: #000;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item::before {
+    content: " ";
+    width: 2rem;
+    height: 0.2rem;
+    background: #007BFF;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover::before {
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.contact-btn {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.6rem 2rem;
+    border: 1px solid rgb(150, 150, 150);
+    outline: 1.5px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    color: #fff;
+    background: #007BFF;
+    outline: 1.5px solid #2c92ff;
+}
+
+.menu-btn {
+    width: 4.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #007BFF;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.menu-btn:hover {
+    color: #2c92ff;
+    background: #000;
+    outline: 1.5px solid #2c92ff;
+}
+
+.admin_but {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width:769px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-content ul {
+        display: none;
+    }
+}
+
+@media (max-width:1325px) {
+    .nav-wrapper {
+        padding: 0 2rem;
+    }
+}
