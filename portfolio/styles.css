@@ -1,0 +1,433 @@
+/* scroll stylinng*/
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* Hide default scrollbars */
+
+    background-color: #cfcfcf;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    /* Snap sections into view */
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    /* Smooth section transition */
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    overflow-y: auto;
+}
+
+/* home page styling*/
+.nav {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    top: -50px;
+}
+
+.topanimate {
+    animation: topmove 3s forwards;
+}
+
+@keyframes topmove {
+    from {
+        top: -20px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.home_p {
+    font-size: 120px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.home {
+    position: relative;
+    top: -150px;
+}
+
+.home_text {
+    display: grid;
+    grid-template-columns: auto 600px;
+}
+
+.home_skills {
+
+    margin-left: 100px;
+    font-size: 38px;
+    font-family: "Dancing Script", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.left {
+    position: relative;
+}
+
+.left_animate {
+    animation: moveleft 3s forwards;
+}
+
+@keyframes moveleft {
+    from {
+        left: 0px;
+        opacity: 0;
+    }
+
+    to {
+        left: 50px;
+        opacity: 1;
+    }
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+.bottom {
+    position: relative;
+    bottom: -50px
+}
+
+.bottom_animate {
+    animation: moveup 3s forwards;
+}
+
+@keyframes moveup {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+.contact_me {
+    box-shadow: 4px 8px 12px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    height: 50vh;
+    border-radius: 15px;
+    display: grid;
+    margin-left: 375px;
+    grid-template-columns: auto auto;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    top: -150px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.profile {
+    height: 30vh;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+}
+
+a {
+    margin-top: 1rem;
+}
+
+.social_media {
+    padding: 2rem 0 1rem 4rem;
+}
+
+.details {
+    padding: 5rem 2rem 0 1rem;
+}
+
+.icons {
+    width: 2.5rem;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+}
+
+.projects_scroll {
+    transform: rotate(-90deg);
+    position: relative;
+    left: 1300px;
+    top: 10rem;
+    width: 15%;
+    font-size: 1.8rem;
+
+}
+
+.about_scroll {
+    transform: rotate(90deg);
+    width: 15%;
+    position: relative;
+    top: 18rem;
+    left: -5rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 50px;
+    animation: bounce 1s infinite;
+    /* Infinite bounce animation */
+}
+
+/* Arrow bounce keyframe animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end positions */
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Mid-point position (move up) */
+    }
+}
+
+.contact_scroll {
+    position: relative;
+    width: 15%;
+    font-size: 2rem;
+    top: -170px;
+    margin-left: 42.5rem;
+    font-size: 38px;
+    font-family: "Dancing Script", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*projects styling*/
+.pro_img,
+.pro_img-left {
+    width: 30rem;
+    border: .5rem solid whitesmoke;
+    height: 40vh;
+
+}
+
+.projects,
+.card-right,
+.card-left {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card-right {
+    margin-bottom: 17rem;
+    position: relative;
+}
+
+.card-left {
+    margin-top: 17rem;
+    position: relative;
+}
+
+.card-title {
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 406;
+    font-style: normal;
+}
+
+.card-content,
+.card-content-left {
+    width: 100%;
+    height: 30vh;
+    color: #000000;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 507;
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    top: 30px;
+}
+
+.card-content-left {
+    position: relative;
+    left: -510px;
+    margin-bottom: 1rem;
+}
+
+.pro_img-left {
+    position: relative;
+    right: -230px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 100% 100%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+/* about styling */
+.about {
+    display: grid;
+    grid-template-columns: 500px 800px;
+    margin: 5rem;
+}
+
+.profile_img {
+    border-radius: 10px;
+    width: 70%;
+    margin-top: 7rem;
+    border-left: 0.5rem solid black;
+    border-bottom: 1rem solid black;
+}
+
+.skills {
+    position: relative;
+    top: -100px;
+    display: grid;
+    grid-template-columns: 550px 300px;
+    margin-top: 5rem;
+}
+
+.myself p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 507;
+    font-style: normal;
+    line-height: 1.5;
+    position: relative;
+    top: -70px;
+}
+
+.right_animate {
+    animation: moveright 3s forwards;
+}
+
+@keyframes moveright {
+    from {
+        right: -50px;
+        opacity: 0;
+    }
+
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+.progress-container {
+    width: 100%;
+    border-radius: 25px;
+    padding: 3px;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: rgb(110, 109, 109);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 20%;
+    padding: 5px;
+}
+
+.hovered {
+    margin-top: 10rem;
+    background: black;
+    width: 50%;
+    padding: 7px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.hovered:hover+.hide {
+    display: block;
+    transition: 2s ease;
+    color: black;
+
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateX(-px);
+    }
+}
+
+.block {
+    animation: appear linear;
+    animation-delay: 5s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
